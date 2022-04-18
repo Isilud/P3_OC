@@ -1,0 +1,29 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.footer {
+    background-color: rgb(63, 63, 63);
+    color: white;
+    padding: 1.5em 5%;
+
+    &__title{
+        font-family: 'Shrikhand';
+    }
+
+    &__link{
+        padding-bottom: 0.5em;
+
+        &--bold{
+            font-weight: bolder;
+        }
+
+        &--icon{
+            width: 1em;
+            padding-right: 2em;
+        }
+    }
+}

@@ -1,0 +1,11 @@
+@function lighter($colour) {
+  @if (lightness($colour) < 25%) {
+    $colour: lighten($colour, 10%);
+  }
+}
+
+@function darker($colour) {
+  @if (lightness($colour) >= 50%) {
+    $colour: darken($colour, (100% - lightness($colour)));
+  }
+}
