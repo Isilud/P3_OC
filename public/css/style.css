@@ -351,6 +351,11 @@ p {
   margin: 0px;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 ul {
   list-style: none;
   padding: 0px;
@@ -362,6 +367,10 @@ ul {
   justify-content: center;
   align-items: center;
   padding: 20px;
+}
+.header__return {
+  position: absolute;
+  left: 0px;
 }
 
 .footer {
@@ -433,6 +442,7 @@ ul {
   border-radius: 1.5em;
   background-color: rgb(241, 241, 241);
   padding: 1.5em 0em;
+  box-shadow: 0.1rem 0.1rem 0.4rem #808080;
 }
 .explanation__entry-number {
   width: 1.5em;
@@ -479,6 +489,7 @@ ul {
   overflow: hidden;
   position: relative;
   border-radius: 1em;
+  box-shadow: 0.1rem 0.1rem 0.4rem #808080;
 }
 .card__image {
   height: 100%;
@@ -511,7 +522,9 @@ ul {
   padding: 0.8em 1.5em;
   border: none;
   border-radius: 3em;
-  background-color: #FF79DA;
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: white;
+  box-shadow: 0.1rem 0.1rem 0.4rem #808080;
 }
 
 /*# sourceMappingURL=style.css.map */

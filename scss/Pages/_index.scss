@@ -53,6 +53,7 @@
     border-radius: 1.5em;
     background-color: rgb(241, 241, 241);
     padding: 1.5em 0em;
+    @include shadow;
 
     &-number {
       width: 1.5em;
@@ -85,7 +86,7 @@
 .restaurant {
   padding: 3em 5%;
   background-color: rgb(241, 241, 241);
-  
+
   &__title {
     font-size: 1.5em;
     margin-top: 0px;
@@ -106,6 +107,7 @@
   overflow: hidden;
   position: relative;
   border-radius: 1em;
+  @include shadow;
 
   &__image {
     height: 100%;

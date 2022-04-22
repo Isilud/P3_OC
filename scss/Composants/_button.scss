@@ -3,5 +3,7 @@
     padding: 0.8em 1.5em;
     border: none;
     border-radius: 3em;
-    background-color: $secondary;
+    background: linear-gradient($secondary, $primary);
+    color : white;
+    @include shadow;
 }
