@@ -16,20 +16,116 @@
   </head>
   <body>
     <header class="header">
-        <a class="header__return" href="../index.html">
-            <i class="fa-solid fa-arrow-left"></i>
-          </a>
-        <picture class="header__logo">
-          <img src="../assets/logo/ohmyfood@2x.svg" alt="OhMyFood" />
-        </picture>
-      </header>
-    La palette du goût Entrées Fricassée d'escargot Au piment d'Espelette 25€
-    Foie gras de canard mi-cuit Et ses copeaux de truffe noire 35€ Oeuf au plat
-    Assaisonné à la truffe sur lit de caviar 20€ Plats Filet de boeuf aux herbes
-    Accompagné de sa ribambelle de légumes 40€ Parmentier de queue de boeuf À la
-    truffe noire sur sa purée de panais 35€ Filet de turbot Aux agrumes 44€
-    Desserts Paris-Brest Revisité 18€ Macaron au chocolat d'exception Et glace à
-    la vanille de Madagascar 22€ Mousse au chocolat Au piment d'Espelette et à
-    la truffe noire 23€
+      <a class="header__return" href="../index.html">
+        <i class="fa-solid fa-arrow-left"></i>
+      </a>
+      <picture class="header__logo">
+        <img src="../assets/logo/ohmyfood@2x.svg" alt="OhMyFood" />
+      </picture>
+    </header>
+    <main class="restaurant">
+      <div class="restaurant__image-container">
+        <img
+          class="restaurant__image"
+          src="../assets/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+          alt=""
+        />
+      </div>
+      <section class="restaurant__presentation">
+        <h3 class="restaurant__title">
+          La palette du goût
+          <i class="restaurant__title-like fa-regular fa-heart"></i>
+        </h3>
+        <div class="restaurant__wrapper">
+          <ul class="restaurant__category">
+            <h4 class="restaurant__category-title">Entrées</h4>
+            <li class="dish">
+              <span class="dish__name">Fricassée d'escargot</span>
+              <span class="dish__subtext"
+                >Au piment d'Espelette
+                <span class="dish__subtext-price">25€</span></span
+              >
+            </li>
+            <li class="dish">
+              <span class="dish__name">Foie gras de canard mi-cuit</span>
+              <span class="dish__subtext">
+                Et ses copeaux de truffe noire
+                <span class="dish__subtext-price"> 35€ </span>
+              </span>
+            </li>
+            <li class="dish">
+              <span class="dish__name">Oeuf au plat</span>
+              <span class="dish__subtext"
+                >Assaisonné à la truffe sur lit de caviar
+                <span class="dish__subtext-price">20€</span>
+              </span>
+            </li>
+          </ul>
+          <ul class="restaurant__category">
+            <h4 class="restaurant__category-title">Plats</h4>
+            <li class="dish">
+              <span class="dish__name">Filet de boeuf aux herbes</span>
+              <span class="dish__subtext"
+                >Accompagné de sa ribambelle de légumes
+                <span class="dish__subtext-price">40€</span>
+              </span>
+            </li>
+            <li class="dish">
+              <span class="dish__name">Parmentier de queue de boeuf</span>
+              <span class="dish__subtext"
+                >À la truffe noire sur sa purée de panais
+                <span class="dish__subtext-price">35€</span>
+              </span>
+            </li>
+            <li class="dish">
+              <span class="dish__name">Filet de turbot</span>
+              <span class="dish__subtext"
+                >Aux agrumes
+                <span class="dish__subtext-price">44€</span>
+              </span>
+            </li>
+          </ul>
+          <ul class="restaurant__category">
+            <h4 class="restaurant__category-title">Desserts</h4>
+            <li class="dish">
+              <span class="dish__name">Paris-Brest</span>
+              <span class="dish__subtext"
+                >Revisité<span class="dish__subtext-price">18€</span>
+              </span>
+            </li>
+            <li class="dish">
+              <span class="dish__name">Macaron au chocolat d'exception</span>
+              <span class="dish__subtext"
+                >Et glace à la vanille de Madagascar
+                <span class="dish__subtext-price">22€</span>
+              </span>
+            </li>
+            <li class="dish">
+              <span class="dish__name">Mousse au chocolat</span>
+              <span class="dish__subtext"
+                >Au piment d'Espelette et à la truffe noire
+                <span class="dish__subtext-price">23€</span>
+              </span>
+            </li>
+          </ul>
+        </div>
+        <div class="restaurant__presentation-button">
+          <button class="button">Commander</button>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <h3 class="footer__title">ohmyfood</h3>
+      <p class="footer__link footer__link--bold">
+        <i class="footer__link--icon fa-solid fa-utensils"></i>Proposer un
+        restaurant
+      </p>
+      <p class="footer__link footer__link--bold">
+        <i class="footer__link--icon fa-solid fa-handshake-angle"></i>Devenir
+        partenaire
+      </p>
+      <p class="footer__link">Mentions légales</p>
+      <p class="footer__link">Contact</p>
+    </footer>
   </body>
 </html>

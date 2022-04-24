@@ -4,7 +4,7 @@
   justify-content: center;
   text-align: center;
   align-items: center;
-  background: rgb(228, 228, 228);
+  background: $background;
 
   &__location-container {
     font-size: 1em;
@@ -83,7 +83,7 @@
   }
 }
 
-.restaurant {
+.restaurantslist {
   padding: 3em 5%;
   background-color: rgb(241, 241, 241);
 
@@ -116,6 +116,15 @@
     object-position: center center;
     position: relative;
     bottom: 4em;
+  }
+
+  &__newbox {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    background-color: lightgreen;
+    color: green;
+    padding:0.6em 1em;
   }
 
   &__caption {

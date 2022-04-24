@@ -1,0 +1,79 @@
+.restaurant {
+  &__image {
+    object-fit: cover;
+    width: 100%;
+    &-container {
+      width: inherit;
+      height: 220px;
+    }
+  }
+
+  &__presentation {
+    position: relative;
+    background-color: $background;
+    border-radius: 2em 2em 0em 0em;
+
+    &-button {
+      padding: 2em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__title {
+    @include title;
+    font-size: 1.9em;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5em 1.5em 1em 0.5em;
+    margin: 0px;
+  }
+
+  &__wrapper {
+    padding: 0em 1em;
+  }
+
+  &__category {
+    &-title {
+      position: relative;
+      font-size: 1.2em;
+      margin: 1em 0em;
+      font-weight: 100;
+      text-transform: uppercase;
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -3px;
+        left: 0px;
+        width: 2.5em;
+        height: 3px;
+        background-color: $tertiary;
+      }
+    }
+  }
+}
+
+.dish {
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: white;
+  margin-bottom: 1em;
+  padding: 1em;
+  row-gap: 0.5em;
+
+  &__name {
+    font-weight: bolder;
+  }
+
+  &__subtext {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    &-price {
+      font-weight: bolder;
+    }
+  }
+}
