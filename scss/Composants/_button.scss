@@ -1,9 +1,15 @@
 .button {
-    width: fit-content;
-    padding: 0.8em 1.5em;
-    border: none;
-    border-radius: 3em;
-    background: linear-gradient($secondary, $primary);
-    color : white;
-    @include shadow;
+  width: fit-content;
+  padding: 0.8em 1.5em;
+  border: none;
+  border-radius: 3em;
+  background: linear-gradient($secondary, $primary);
+  color: white;
+  @include shadow;
+  opacity: 0.9;
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0.1rem 0.1rem 0.4rem #3b3b3b;
+    opacity: 1;
+  }
 }
