@@ -124,7 +124,7 @@
     right: 1em;
     background-color: lightgreen;
     color: green;
-    padding:0.6em 1em;
+    padding: 0.6em 1em;
   }
 
   &__caption {
@@ -138,12 +138,29 @@
       font-weight: bolder;
       padding-bottom: 0.3em;
     }
+  }
+}
 
-    &-like {
-      position: absolute;
-      top: 1.25rem;
-      right: 1.25rem;
-      font-size: 1.5em;
-    }
+.like {
+  position: absolute;
+  top: 1.25rem;
+  right: 2.75rem;
+  font-size: 1.5em;
+
+  &:hover .like__animated {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+
+  &__base {
+    position: absolute;
+  }
+
+  &__animated {
+    position: absolute;
+    color: pink;
+    clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+    background-color: pink;
+    background-clip: text;
+    transition: clip-path 1s;
   }
 }
