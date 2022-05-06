@@ -6,6 +6,11 @@
     &__return {
         position : absolute;
         left: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3em;
+        padding-left: 1em;
     }
 }
 
