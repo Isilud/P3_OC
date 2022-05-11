@@ -3,8 +3,9 @@
     object-fit: cover;
     width: 100%;
     &-container {
+      overflow: hidden;
       width: inherit;
-      height: 220px;
+      height: 250px;
     }
   }
 
@@ -12,6 +13,7 @@
     position: relative;
     background-color: $background;
     border-radius: 2em 2em 0em 0em;
+    top: -2.5em;
 
     &-button {
       padding: 2em;
@@ -32,6 +34,10 @@
 
   &__wrapper {
     padding: 0em 1em;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(335px, 1fr));
+    grid-gap: 30px;
   }
 
   &__category {
@@ -56,7 +62,7 @@
 }
 
 .dish {
-  @include animation;
+  @include apparition;
   border-radius: 1em;
   margin-bottom: 1em;
   overflow: hidden;
@@ -65,6 +71,7 @@
 
   &__text {
     flex-grow: 1;
+    min-width: 0px;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -77,16 +84,28 @@
     font-weight: bolder;
   }
 
-  &__subtext {
+  &__info {
+    min-width: 0px;
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: space-between;
+    white-space: nowrap;
+
+    &-text {
+      min-width: 0px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
     &-price {
       font-weight: bolder;
     }
   }
 
   &__check {
+    min-width: 0px;
     max-width: 0px;
     flex-grow: 100;
     background-color: $tertiary;
@@ -95,15 +114,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: max-width 0.5s;
+    transition: min-width 0.5s, max-width 0.5s;
   }
 
-  .fa-circle-check{
+  .fa-circle-check {
     transition: transform 1s;
   }
 
   &:hover {
     .dish__check {
+      min-width: 2.25em;
       max-width: 2.25em;
     }
     .fa-circle-check {

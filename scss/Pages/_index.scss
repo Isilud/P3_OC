@@ -46,6 +46,13 @@
     margin-bottom: 1em;
   }
 
+  &__list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(335px, 1fr));
+    grid-gap: 30px;
+  }
+
   &__entry {
     display: flex;
     width: 100%;
@@ -54,6 +61,7 @@
     background-color: rgb(241, 241, 241);
     padding: 1.5em 0em;
     @include shadow;
+    margin-bottom: 1em;
 
     &-number {
       width: 1.5em;
@@ -75,10 +83,6 @@
 
     &-text {
       font-weight: bolder;
-    }
-
-    &:not(:last-child) {
-      margin-bottom: 1em;
     }
   }
 }
@@ -163,4 +167,8 @@
     background-clip: text;
     transition: clip-path 1s;
   }
+}
+
+main {
+  @include hide;
 }

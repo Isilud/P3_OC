@@ -440,6 +440,12 @@ ul {
   margin-top: 0px;
   margin-bottom: 1em;
 }
+.explanation__list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(335px, 1fr));
+  grid-gap: 30px;
+}
 .explanation__entry {
   display: flex;
   width: 100%;
@@ -448,6 +454,7 @@ ul {
   background-color: rgb(241, 241, 241);
   padding: 1.5em 0em;
   box-shadow: 0.1rem 0.1rem 0.4rem #808080;
+  margin-bottom: 1em;
 }
 .explanation__entry-number {
   width: 1.5em;
@@ -467,9 +474,6 @@ ul {
 }
 .explanation__entry-text {
   font-weight: bolder;
-}
-.explanation__entry:not(:last-child) {
-  margin-bottom: 1em;
 }
 
 .restaurantslist {
@@ -545,18 +549,33 @@ ul {
   transition: clip-path 1s;
 }
 
+main {
+  opacity: 1;
+  animation: hide 2s;
+}
+@keyframes hide {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
 .restaurant__image {
   object-fit: cover;
   width: 100%;
 }
 .restaurant__image-container {
+  overflow: hidden;
   width: inherit;
-  height: 220px;
+  height: 250px;
 }
 .restaurant__presentation {
   position: relative;
   background-color: #f2f2f2;
   border-radius: 2em 2em 0em 0em;
+  top: -2.5em;
 }
 .restaurant__presentation-button {
   padding: 2em;
@@ -574,6 +593,10 @@ ul {
 }
 .restaurant__wrapper {
   padding: 0em 1em;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(335px, 1fr));
+  grid-gap: 30px;
 }
 .restaurant__category-title {
   position: relative;
@@ -641,6 +664,7 @@ ul {
 }
 .dish__text {
   flex-grow: 1;
+  min-width: 0px;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -651,15 +675,25 @@ ul {
 .dish__name {
   font-weight: bolder;
 }
-.dish__subtext {
+.dish__info {
+  min-width: 0px;
   display: flex;
   flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: space-between;
+  white-space: nowrap;
 }
-.dish__subtext-price {
+.dish__info-text {
+  min-width: 0px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.dish__info-price {
   font-weight: bolder;
 }
 .dish__check {
+  min-width: 0px;
   max-width: 0px;
   flex-grow: 100;
   background-color: #99E2D0;
@@ -668,12 +702,13 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: max-width 0.5s;
+  transition: min-width 0.5s, max-width 0.5s;
 }
 .dish .fa-circle-check {
   transition: transform 1s;
 }
 .dish:hover .dish__check {
+  min-width: 2.25em;
   max-width: 2.25em;
 }
 .dish:hover .fa-circle-check {
