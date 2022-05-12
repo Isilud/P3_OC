@@ -398,12 +398,22 @@ ul {
 }
 
 .exploration {
+  opacity: 1;
+  animation: hide 2s;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
   align-items: center;
   background: #f2f2f2;
+}
+@keyframes hide {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+  }
 }
 .exploration__location-container {
   font-size: 1em;
@@ -433,7 +443,17 @@ ul {
 }
 
 .explanation {
+  opacity: 1;
+  animation: hide 2s;
   padding: 3em 5%;
+}
+@keyframes hide {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+  }
 }
 .explanation__title {
   font-size: 1.5em;
@@ -477,8 +497,18 @@ ul {
 }
 
 .restaurantslist {
+  opacity: 1;
+  animation: hide 2s;
   padding: 3em 5%;
   background-color: rgb(241, 241, 241);
+}
+@keyframes hide {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+  }
 }
 .restaurantslist__title {
   font-size: 1.5em;
@@ -592,19 +622,6 @@ ul {
   }
   to {
     opacity: 1;
-  }
-}
-
-main {
-  opacity: 1;
-  animation: hide 2s;
-}
-@keyframes hide {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 0;
   }
 }
 
