@@ -53,22 +53,30 @@
   }
 }
 
-@mixin rotate-child {
-  @for $i from 0 through 3 {
+@mixin rotate {
+  @for $i from 1 through 3 {
     &:nth-child(#{$i}) {
-      position: relative;
-      animation: rotate  #{$i * 0.5}s;
-      animation-fill-mode: both;
+      opacity: 0;
+      position: absolute;
+      font-size: #{$i * 1.6}em;
+      transform-origin: 50% 50%;
+      animation: rotateanim #{$i * 0.8}s linear infinite, show 2s;
     }
   }
-  @keyframes rotate {
+  @keyframes rotateanim {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes show {
     from {
-      opacity: 0;
-      left: 10%;
+      opacity: 1;
     }
     to {
       opacity: 1;
-      left: 0px;
     }
   }
 }
