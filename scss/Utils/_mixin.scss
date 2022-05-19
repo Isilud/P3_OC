@@ -40,27 +40,13 @@
   }
 }
 
-@mixin hide {
-  opacity: 1;
-  animation: hide 2s;
-  @keyframes hide {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 0;
-    }
-  }
-}
-
 @mixin rotate {
   @for $i from 1 through 3 {
     &:nth-child(#{$i}) {
-      opacity: 0;
       position: absolute;
       font-size: #{$i * 1.6}em;
       transform-origin: 50% 50%;
-      animation: rotateanim #{$i * 0.8}s linear infinite, show 2s;
+      animation: rotateanim #{$i * 0.8}s linear infinite;
     }
   }
   @keyframes rotateanim {
@@ -71,12 +57,18 @@
       transform: rotate(360deg);
     }
   }
+}
+
+@mixin show {
+  position: relative;
+  top: -10em;
+  animation: show 2s;
   @keyframes show {
     from {
-      opacity: 1;
+      top: 10em;
     }
     to {
-      opacity: 1;
+      top: 10em;
     }
   }
 }

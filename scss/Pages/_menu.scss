@@ -1,11 +1,15 @@
 .restaurant {
+  overflow: hidden;
+
   &__image {
     object-fit: cover;
     width: 100%;
+
     &-container {
-      overflow: hidden;
       width: inherit;
       height: 250px;
+      display: flex;
+      align-items: center;
     }
   }
 
@@ -13,10 +17,11 @@
     position: relative;
     background-color: $background;
     border-radius: 2em 2em 0em 0em;
-    top: -2.5em;
 
     &-button {
-      padding: 2em;
+      font-size: 1.2em;
+      padding-top: 3rem;
+      padding-bottom: 5.5rem;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -63,28 +68,34 @@
 
 .dish {
   @include apparition;
-  border-radius: 1em;
-  margin-bottom: 1em;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
   overflow: hidden;
   display: flex;
   flex-direction: row;
 
   &__text {
     flex-grow: 1;
+    font-size: 1.3em;
     min-width: 0px;
     display: flex;
     flex-direction: column;
     position: relative;
     background-color: white;
-    padding: 1em;
-    row-gap: 0.5em;
+    padding: 1rem;
+    row-gap: 0.3rem;
   }
 
   &__name {
     font-weight: bolder;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 
   &__info {
+    font-size: 0.9em;
+    font-weight: 300;
     min-width: 0px;
     display: flex;
     flex-direction: row;

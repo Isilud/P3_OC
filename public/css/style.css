@@ -5,7 +5,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -374,17 +374,21 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 3em;
+  font-size: 1.6em;
   padding-left: 1em;
 }
 
 .footer {
   background-color: rgb(63, 63, 63);
   color: white;
-  padding: 1.5em 5%;
+  padding: 1.3em 5%;
+  font-size: 1.1em;
+  padding-top: 1rem;
 }
 .footer__title {
   font-family: "Shrikhand";
+  font-size: 1.1em;
+  margin-bottom: 1.3em;
 }
 .footer__link {
   padding-bottom: 0.5em;
@@ -416,36 +420,46 @@ ul {
   }
 }
 .exploration__location-container {
-  font-size: 1em;
-  padding: 15px;
+  width: 100%;
+  height: 3em;
+  font-size: 1.1em;
+  padding: 19px;
   position: relative;
-  right: 1em;
+  font-weight: bolder;
+  background: #e5e5e5;
+  box-shadow: 0rem 0.2rem 0.4rem #808080 inset;
 }
 .exploration__location-image {
-  font-size: 1.2em;
-  padding-right: 1em;
+  position: relative;
+  right: 1.2em;
+  font-size: 1.1em;
 }
 .exploration__text {
+  color: #666666;
   display: flex;
   flex-direction: column;
   align-items: center;
-  row-gap: 1em;
+  row-gap: 0.6em;
   width: 100%;
-  background-color: rgb(241, 241, 241);
+  background-color: #f2f2f2;
   font-size: 1.3em;
-  padding: 2em 5%;
+  margin: 2.6rem 0rem;
 }
 .exploration__text--bold {
+  color: black;
   font-weight: bolder;
   font-size: 1.5em;
-  padding: 0px 5%;
+  margin: 0px 4rem;
   margin-bottom: 0px;
+}
+.exploration__button-container {
+  margin: 1.3rem 0em;
 }
 
 .explanation {
   opacity: 1;
   animation: hide 2s;
-  padding: 3em 5%;
+  padding: 3.5em 5% 4.7em;
 }
 @keyframes hide {
   from {
@@ -456,9 +470,9 @@ ul {
   }
 }
 .explanation__title {
-  font-size: 1.5em;
+  font-size: 1.7em;
   margin-top: 0px;
-  margin-bottom: 1em;
+  margin-bottom: 1.3em;
 }
 .explanation__list {
   width: 100%;
@@ -468,39 +482,48 @@ ul {
 }
 .explanation__entry {
   display: flex;
+  align-items: center;
   width: 100%;
   border: none;
-  border-radius: 1.5em;
-  background-color: rgb(241, 241, 241);
-  padding: 1.5em 0em;
+  border-radius: 1.3em;
+  background-color: #f2f2f2;
+  padding: 1.6em 0em;
   box-shadow: 0.1rem 0.1rem 0.4rem #808080;
-  margin-bottom: 1em;
+}
+.explanation__entry--colored {
+  background: #f7f2fc;
 }
 .explanation__entry-number {
-  width: 1.5em;
-  height: 1.5em;
+  width: 2em;
+  height: 2em;
   background-color: #9356DC;
   border-radius: 2em;
   color: white;
-  font-size: 0.8em;
+  font-size: 0.9em;
   text-align: center;
-  padding-top: 0.2em;
+  padding-top: 0.5em;
   position: relative;
   right: 0.75em;
 }
 .explanation__entry-image {
-  padding: 0em 1em;
+  padding-left: 0.5em;
+  padding-right: 1em;
+  font-size: 1.2em;
   color: grey;
+}
+.explanation__entry-image--colored {
+  color: #9356DC;
 }
 .explanation__entry-text {
   font-weight: bolder;
+  font-size: 1.1em;
 }
 
 .restaurantslist {
   opacity: 1;
   animation: hide 2s;
-  padding: 3em 5%;
-  background-color: rgb(241, 241, 241);
+  padding: 4em 5%;
+  background-color: #f2f2f2;
 }
 @keyframes hide {
   from {
@@ -511,7 +534,8 @@ ul {
   }
 }
 .restaurantslist__title {
-  font-size: 1.5em;
+  font-weight: bolder;
+  font-size: 1.7em;
   margin-top: 0px;
   margin-bottom: 1em;
 }
@@ -519,11 +543,11 @@ ul {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(335px, 1fr));
-  grid-gap: 30px;
+  grid-gap: 25px;
 }
 
 .card {
-  height: 300px;
+  height: 290px;
   margin: 0px;
   overflow: hidden;
   position: relative;
@@ -540,22 +564,25 @@ ul {
 }
 .card__newbox {
   position: absolute;
+  font-weight: bolder;
   top: 1em;
   right: 1em;
-  background-color: lightgreen;
-  color: green;
-  padding: 0.6em 1em;
+  background-color: #99E2D0;
+  color: #32b091;
+  padding: 0.4em 1em;
 }
 .card__caption {
   width: 100%;
   position: absolute;
   bottom: 0px;
   background-color: white;
-  padding: 1em;
+  font-size: 1.1em;
+  padding: 1rem;
 }
 .card__caption-bold {
   font-weight: bolder;
-  padding-bottom: 0.3em;
+  font-size: 1.2em;
+  padding-bottom: 0.4em;
 }
 
 .like {
@@ -574,39 +601,44 @@ ul {
   position: absolute;
   color: pink;
   clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
-  background-color: pink;
   background-clip: text;
   transition: clip-path 1s;
 }
 
 .loading {
   width: 100%;
-  position: absolute;
-  top: 20em;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  top: -10em;
+  animation: show 2s;
+}
+@keyframes show {
+  from {
+    top: 10em;
+  }
+  to {
+    top: 10em;
+  }
 }
 .loading__spinner:nth-child(1) {
-  opacity: 0;
   position: absolute;
   font-size: 1.6em;
   transform-origin: 50% 50%;
-  animation: rotateanim 0.8s linear infinite, show 2s;
+  animation: rotateanim 0.8s linear infinite;
 }
 .loading__spinner:nth-child(2) {
-  opacity: 0;
   position: absolute;
   font-size: 3.2em;
   transform-origin: 50% 50%;
-  animation: rotateanim 1.6s linear infinite, show 2s;
+  animation: rotateanim 1.6s linear infinite;
 }
 .loading__spinner:nth-child(3) {
-  opacity: 0;
   position: absolute;
   font-size: 4.8em;
   transform-origin: 50% 50%;
-  animation: rotateanim 2.4s linear infinite, show 2s;
+  animation: rotateanim 2.4s linear infinite;
 }
 @keyframes rotateanim {
   0% {
@@ -616,32 +648,29 @@ ul {
     transform: rotate(360deg);
   }
 }
-@keyframes show {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 1;
-  }
-}
 
+.restaurant {
+  overflow: hidden;
+}
 .restaurant__image {
   object-fit: cover;
   width: 100%;
 }
 .restaurant__image-container {
-  overflow: hidden;
   width: inherit;
   height: 250px;
+  display: flex;
+  align-items: center;
 }
 .restaurant__presentation {
   position: relative;
   background-color: #f2f2f2;
   border-radius: 2em 2em 0em 0em;
-  top: -2.5em;
 }
 .restaurant__presentation-button {
-  padding: 2em;
+  font-size: 1.2em;
+  padding-top: 3rem;
+  padding-bottom: 5.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -679,8 +708,8 @@ ul {
 }
 
 .dish {
-  border-radius: 1em;
-  margin-bottom: 1em;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
   overflow: hidden;
   display: flex;
   flex-direction: row;
@@ -727,18 +756,24 @@ ul {
 }
 .dish__text {
   flex-grow: 1;
+  font-size: 1.3em;
   min-width: 0px;
   display: flex;
   flex-direction: column;
   position: relative;
   background-color: white;
-  padding: 1em;
-  row-gap: 0.5em;
+  padding: 1rem;
+  row-gap: 0.3rem;
 }
 .dish__name {
   font-weight: bolder;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .dish__info {
+  font-size: 0.9em;
+  font-weight: 300;
   min-width: 0px;
   display: flex;
   flex-direction: row;
@@ -779,7 +814,7 @@ ul {
 }
 
 .button {
-  width: fit-content;
+  width: 14rem;
   padding: 0.8em 1.5em;
   border: none;
   border-radius: 3em;
