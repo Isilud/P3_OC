@@ -591,11 +591,13 @@ ul {
   right: 2.75rem;
   font-size: 1.5em;
 }
-.like:hover .like__animated {
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-}
 .like__base {
   position: absolute;
+  opacity: 1;
+  transition: opacity 1s;
+}
+.like:hover .like__base {
+  opacity: 0;
 }
 .like__animated {
   position: absolute;
@@ -603,6 +605,9 @@ ul {
   clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
   background-clip: text;
   transition: clip-path 1s;
+}
+.like:hover .like__animated {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
 .loading {

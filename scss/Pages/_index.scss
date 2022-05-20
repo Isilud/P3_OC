@@ -101,7 +101,6 @@
 
       &--colored {
         color: $primary;
-        
       }
     }
 
@@ -181,12 +180,14 @@
   right: 2.75rem;
   font-size: 1.5em;
 
-  &:hover .like__animated {
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-  }
-
   &__base {
     position: absolute;
+    opacity: 1;
+    transition: opacity 1s;
+  }
+
+  &:hover .like__base {
+    opacity: 0;
   }
 
   &__animated {
@@ -196,6 +197,10 @@
     background-clip: text;
     transition: clip-path 1s;
   }
+
+  &:hover .like__animated {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
 }
 
 .loading {
@@ -204,6 +209,7 @@
   justify-content: center;
   align-items: center;
   @include show;
+
   &__spinner {
     @include rotate;
   }
