@@ -392,6 +392,7 @@ ul {
 }
 .footer__link {
   padding-bottom: 0.5em;
+  color: white;
 }
 .footer__link--bold {
   font-weight: bolder;
